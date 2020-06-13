@@ -2,17 +2,18 @@
 fn main() {
     // println!("Hello, world!");
     // println!("It's weird that println has an exclamation mark after it");
-    chapterOne::comments();
-    chapterOne::formatted_print();
+    // chapter_one::comments();
+    // chapter_one::formatted_print();
+    chapter_two::scalar_types();
 }
 
 
-mod chapterOne{
+mod chapter_one{
     /*
 * 1.1 comments
  */
     #[allow(dead_code)]
-    pub fn comments(){
+    pub fn comments() -> (){
         let x= 5+ /* *90 + */ 5;
         println!("x = {}", x);
     }
@@ -21,8 +22,8 @@ mod chapterOne{
     * 1.2 formatted print
      */
     #[allow(dead_code)]
-    pub fn formatted_print(){
-        let str = format!("{} is a number", 35); //without using format! here, everything falls apart. str becomes an i32... for some reason. primatives are the next chapter though so hopefully it will make sense then. Wow I probably should have used a block comment for this, I'm sure it looks really bad.
+    pub fn formatted_print() -> (){
+        let str = format!("{} is a number", 35); //without using 'format!' here, everything falls apart. str becomes an i32... for some reason. primatives are the next chapter though so hopefully it will make sense then. Wow I probably should have used a block comment for this, I'm sure it looks really bad.
         // println!(str);  //Apparently this is not kosher
         println!("{}", str); //this is fine though
 
@@ -49,7 +50,38 @@ mod chapterOne{
         println!("Pi is roughly {:.3}",pi);
 
     }
+}
+
+
+mod chapter_two{
+    pub fn scalar_types(){
+        //signed ints
+        let eight: i8 = 127;
+        let ueight: u8 = 255;
+        let sixteen:i16 = 32767;
+        let usixteen:u16= 65535;
+        let thirty_two:i32 = 2147483647;
+        let uthirty_two:u32 = 4294967295;
+        let sixty_four:i64=9223372036854775807;
+        let usixty_four:u64=18446744073709551615;
+        let one_twenty_eight:i128 = 170141183460469231731687303715884105727;
+        let u_one_twenty_eight:u128 = 170141183460469231731687303715884105727*2;
+
+        println!("\t signed\t\t\t\t\t\t\t\t\t\tunsigned\t");
+        println!("8\t {}\t\t\t\t\t\t\t\t\t\t{}\t",eight,ueight);
+        println!("16\t {}\t\t\t\t\t\t\t\t\t\t{}\t", sixteen, usixteen);
+        println!("32\t {}\t\t\t\t\t\t\t\t\t{}\t", thirty_two, uthirty_two);
+        println!("64\t {}\t\t\t\t\t\t{}\t", sixty_four, usixty_four);
+        println!("128\t {}\t{}\t", one_twenty_eight, u_one_twenty_eight);
 
 
 
+    }
+
+}
+
+mod chapter_five{
+    fn five_point_one(){
+
+    }
 }
