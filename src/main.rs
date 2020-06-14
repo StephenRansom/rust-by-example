@@ -66,13 +66,15 @@ mod chapter_two{
         let usixty_four:u64=18446744073709551615;
         let one_twenty_eight:i128 = 170141183460469231731687303715884105727;
         let u_one_twenty_eight:u128 = 170141183460469231731687303715884105727*2;
-
+        //TODO format this without using a ton of tabs
+        println!("Integers and max (positive) values");
         println!("\t signed\t\t\t\t\t\t\t\t\t\tunsigned\t");
         println!("8\t {}\t\t\t\t\t\t\t\t\t\t{}\t",eight,ueight);
         println!("16\t {}\t\t\t\t\t\t\t\t\t\t{}\t", sixteen, usixteen);
         println!("32\t {}\t\t\t\t\t\t\t\t\t{}\t", thirty_two, uthirty_two);
         println!("64\t {}\t\t\t\t\t\t{}\t", sixty_four, usixty_four);
         println!("128\t {}\t{}\t", one_twenty_eight, u_one_twenty_eight);
+
 
 
 
