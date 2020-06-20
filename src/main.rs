@@ -138,9 +138,9 @@ mod chapter_two{
         //no messing around with multi type arrays, use a tuple
         // let an_array = [1,4,3,76,567,3456,true, "asdf"];
         let bool_array:[bool; 2] = [true, false];
-        let an_array = [1,2,3,4,5,6];
-        //can't do this, gotta read the array chapter to figure out if you can make them mutable
-        // an_array=[1]=4;
+        let mut an_array:[i32;6] = [1,2,3,4,5,6];
+
+        an_array[1]=4;
         // println!("{}", an_array);
     }
 
